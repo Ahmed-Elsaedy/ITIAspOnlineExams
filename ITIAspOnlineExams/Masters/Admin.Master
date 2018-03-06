@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="ITIAspOnlineExams.Masters.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="../CSS/dashboard.css" rel="stylesheet" />
+    <title>Admin Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top navbar-inverse bg-primary">
+        <a class="navbar-brand" href="#">Online Exams System</a>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Admin/Departments.aspx">Departments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Admin/Instructors.aspx">Instructors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Admin/Students.aspx">Students</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Admin/Courses.aspx">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Admin/Topics.aspx">Topics</a>
+                    </li>
+                </ul>
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Admin/InstructorsCourses.aspx">Instuctors Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Admin/StudentsCourses.aspx">Students Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Admin/StudentsExams.aspx">Students Exams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Admin/Questions.aspx">Questions</a>
+                    </li>
+                </ul>
+                <ul class="nav nav-pills flex-column">
+                    <li>
+                    <a class="nav-link" href="../Admin/Members.aspx">Members</a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+                <div visible="false" id="alertDiv" runat="server" class="alert alert-info" role="alert">
+                    <strong>
+                        <asp:Label ID="alertTitle" runat="server" Text="Heads up!"></asp:Label></strong>
+                    <asp:Label ID="alertMsg" runat="server" Text="This alert needs your attention, but it's not super important."></asp:Label>
+                </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
